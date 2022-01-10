@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Henny+Penny" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
+    <title>Chapter 5</title>
+    <style>
+        html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,
+        blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,
+        img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,
+        dl,dt,dd,ol,ul,li,
+        fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,
+        article,aside,canvas,details,embed,figure,figcaption,footer,header,
+        hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+
+        article,aside,details,figcaption,figure,footer,header,
+        hgroup,menu,nav,section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol,ul {
+            list-style: none;
+        }
+
+        blockquote,q {
+            quotes: none;
+        }
+
+        blockquote:before,blockquote:after,q:before,q:after {
+            content: '';
+            content: none;
+        }
+        #main_header{
+            width:560px;
+            margin:0 auto;
+            height:160px;
+            position:relative;
+        }
+        #main_header>#title{
+            position:absolute;
+            left: 20px; top: 30px;
+        }
+        #main_header>#main_gnb{
+            position:absolute;
+            right:0; top:0;
+        }
+        #main_header>#main_lnb{
+            position: absolute;
+            right:0; bottom:10px;
+        }
+        #title{
+            font-family: 'Palette Mosaic', cursive;
+            font-size:2.5em;
+        }
+        #main_gnb>ul{
+            overflow: hidden;
+        }
+        #main_gnb>ul>li{
+            float:left;
+        }
+        #main_gnb>ul>li>a{
+            display:block;
+            padding:2px 10px;
+            border:1px solid black;
+        }
+        #main_lnb>ul{
+            overflow:hidden;
+        }
+        #main_lnb>ul>li{
+            float:left;
+        }
+        #main_lnb>ul>li>a{
+            display:block;
+            padding:10px 20px;
+            border: 1px solid black;
+        }
+        #main_gnb>ul>li:first-child>a{
+            border-radius: 10px 0 0 10px;
+        }
+        #main_gnb>ul>li:last-child>a{
+            border-radius: 0 10px 10px 0;
+        }
+        #main_lnb>ul>li:first-child>a{
+            border-radius: 10px 0 0 10px;
+        }
+        #main_lnb>ul>li:last-child>a{
+            border-radius: 0 10px 10px 0;
+        }
+        #content{
+            width:560px;
+            margin:0 auto;
+            overflow:hidden;
+        }
+        #content>#main_section{
+            width:340px;
+            float: left;
+        }
+        #content>#main_aside{
+            width:200px;
+            float:right;
+        }
+        #main_section>article.main_article{
+            margin-bottom:10px;
+            padding:20px;
+            border: 1px solid black;
+        }
+        input:nth-of-type(1){display: none;}
+        input:nth-of-type(1)~div:nth-of-type(1){display: none;}
+        input:nth-of-type(1):checked~div:nth-of-type(1){display: block;}
+        input:nth-of-type(2){display: none;}
+        input:nth-of-type(2)~div:nth-of-type(2){display: none;}
+        input:nth-of-type(2):checked~div:nth-of-type(2){display: block;}
+        section.button{overflow: hidden;}
+        section.button>label{
+            display:block;
+            float:left;
+            width:100px; height:30px;
+            line-height 30px;
+            text-align: center;
+            box-sizing:border-box;
+            border:1px solid black;
+            background:black;
+            color:white;
+        }
+        input:nth-of-type(1):checked~section.button>label:nth-of-type(1){
+            background:white;
+            color:black;
+        }
+        input:nth-of-type(2):checked~section.button>label:nth-of-type(2){
+            background:white;
+            color:black;
+        }
+        #main_footer{
+            width:560px; margin:0 auto;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid black;
+            text-align:center;
+        }
+</style>
+</head>
+
+<body>
+    <header id="main_header">
+        <div id="title">
+            <h1>Rint Development</h1>
+            <h2>HTML5+CSS3 Basics</h2>
+        </div>
+        <nav id="main_gnb">
+            <ul>
+                <li><a href="#">Web</a></li>
+                <li><a href="#">Mobile</a></li>
+                <li><a href="#">Game</a></li>
+                <li><a href="#">시뮬레이션</a></li>
+                <li><a href="#">Data</a></li>
+            </ul>
+        </nav>
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">HTML5</a></li>
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">Javascript</a></li>
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">Node.js</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div id="content">
+            <section id="main_section">
+                <article class="main_article">
+                    <h1>Main Section</h1>
+                    <p>Lorem Ipsum dolor sit amet. consectetur adipiscing elit.</p>
+                </article>
+                <article class="main_article">
+                    <h1>Main Section</h1>
+                    <p>Lorem Ipsum dolor sit amet. consectetur adipiscing elit.</p>
+                </article>
+                <article class="main_article">
+                    <h1>Main Section</h1>
+                    <p>Lorem Ipsum dolor sit amet. consectetur adipiscing elit.</p>
+                </article>
+            </section>
+            <aside id="main_aside">
+                <input type="radio" id="first" name="tab" checked="checked">
+                <input type="radio" id="second" name="tab">
+                <section class="button">
+                    <label for="first">First</label>
+                    <label for="second">Second</label>
+                </section>
+                <div class="tab_item">
+                    <ul>
+                        <li><a href="#">HTML5 Canvus</a></li>
+                        <li><a href="#">HTML5 Audio</a></li>
+                        <li><a href="#">HTML5 Video</a></li>
+                        <li><a href="#">HTML5 Semantic Web</a></li>
+                    </ul>
+                </div>
+                <div class="tab_item">
+                    <ul>
+                        <li><a href="#">CSS3 Transition</a></li>
+                        <li><a href="#">CSS3 Animation</a></li>
+                        <li><a href="#">CSS3 Border</a></li>
+                        <li><a href="#">CSS3 Box</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer id="main_footer">
+        <h3>HTML5+CSS3 Basic</h3>
+        <address>Website Layout Basic</address>
+    </footer>
+</body>
+
+</html>

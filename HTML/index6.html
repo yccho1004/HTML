@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter-6</title>
+    <style>
+        #main_header{
+            height:45px;
+            background: url('header_background.png');
+            position:relative;
+            text-align:center;
+            line-height:45px;
+        }
+        #main_header>h1{
+            color:rgb(255, 255, 255);
+        }
+        #main_header>a, #main_header>label{
+            display:block;
+            position:absolute;
+            height:32px;
+        }
+        #main_header>a.left{
+            width:62px;
+            left:5px; top:7px;
+            background: url('sprites.png');
+            background-position: 0px 0px;
+            text-indent: -9999px;
+        }
+        #main_header>label.right{
+            width:32px;
+            right: 10px; top:7px;
+            background: url('sprites.png');
+            background-position: -62px 0px;
+            text-indent: -9999px;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle">
+    <div id="wrap">
+        <header id="main_header">
+            <a href="#" class="left">Main</a>
+            <h1>Mobile</h1>
+            <label for="toggle" class="right">Toggle</label>
+        </header>
+    </div>
+
+</body>
+</html>
